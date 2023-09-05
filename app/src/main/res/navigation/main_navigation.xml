@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/postListFragment">
+
+    <fragment
+        android:id="@+id/postListFragment"
+        android:name="com.demo.kalagota.Feature.posts.ui.PostListFragment"
+        android:label="Posts"
+        tools:layout="@layout/fragment_post_list">
+            <action
+                android:id="@+id/action_to_details"
+                app:destination="@id/postDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postDetailFragment"
+        android:name="com.demo.kalagota.Feature.posts.ui.PostDetailFragment"
+        android:label="Comments"
+        tools:layout="@layout/fragment_post_detail">
+        <!-- Add any arguments if needed -->
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/favoritesFragment"-->
+<!--        android:name="f"-->
+<!--        android:label="Favorites"-->
+<!--        tools:layout="@layout/fragment_favorites">-->
+<!--        &lt;!&ndash; Add any arguments if needed &ndash;&gt;-->
+<!--    </fragment>-->
+
+    <!-- Define actions to navigate between fragments -->
+<!--    <action-->
+<!--        android:id="@+id/action_to_favorites"-->
+<!--        app:destination="@id/favoritesFragment" />-->
+
+</navigation>
